@@ -1,5 +1,28 @@
 /* ===== RESPONSIVE RULES ===== */
 
+/* Hide Monaco editor mobile keyboard button on mobile devices */
+@media (max-width: 768px) {
+  /* Hide the virtual keyboard toggle button in Monaco editor */
+  .monaco-editor .monaco-editor-background .monaco-editor-inputarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Hide the keyboard button that appears on mobile */
+  .monaco-editor .monaco-editor-background .monaco-editor-inputarea::-webkit-input-placeholder {
+    -webkit-appearance: none;
+  }
+  
+  /* Additional mobile-specific Monaco fixes */
+  .monaco-editor .monaco-editor-background {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+}
+
 /* Mobile/tablet: up to 1000px */
 @media (max-width: 1000px) {
   /* Show burger, hide left navbar cluster */
