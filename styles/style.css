@@ -1,0 +1,138 @@
+/* ===== FONT FACE DECLARATIONS ===== */
+@font-face {
+  font-family: 'OffBit';
+  src: url('../font/OffBit-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OffBit';
+  src: url('../font/OffBit-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OffBit';
+  src: url('../font/OffBit-101.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OffBit';
+  src: url('../font/OffBit-101Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ===== CSS VARIABLES (DESIGN TOKENS) ===== */
+:root {
+  /* Font Families */
+  --font-family-base: 'OffBit', monospace;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.875rem;   /* 14px */
+  --font-size-sm: 1.1875rem;  /* 19px */
+  --font-size-base: 1.3125rem; /* 21px */
+  --font-size-lg: 1.625rem;   /* 26px */
+  --font-size-xl: 2rem;       /* 32px */
+  --font-size-xxl: 2.375rem;  /* 38px */
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Spacing Scale */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+   
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --transition-bounce: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  
+  /* Colors needed for layout/columns */
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  
+  /* Column system sizing */
+  --space-4xl: 72px; /* width of the vertical tab */
+}
+
+/* ===== BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  max-width: 100%;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  margin: 0;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+h1 { font-size: var(--font-size-xl); }
+h2 { font-size: var(--font-size-lg); }
+h3 { font-size: var(--font-size-base); }
+h4 { font-size: var(--font-size-sm); }
+h5 { font-size: var(--font-size-xs); }
+h6 { font-size: var(--font-size-xs); }
+/* Layout rules moved to styles/layout.css */
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  transition: all var(--transition-normal);
+}
+
+a:hover {
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+a:active {
+  transform: translateY(0);
+}

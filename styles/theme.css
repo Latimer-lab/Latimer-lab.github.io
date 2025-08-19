@@ -1,0 +1,29 @@
+/* ===== DARK THEME ===== */
+
+[data-theme="dark"] {
+  /* Colors */
+  --color-bg: #010409;
+  --color-bg-secondary: #0D1117;
+  --color-text: #c1c1c7;
+  --color-border: #3d444d;
+  --color-primary: #60a5fa;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(255, 255, 255, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(255, 255, 255, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.1);
+}
+
+/* Light theme (default) */
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-text: #1a1a1a;
+  --color-border: #e5e7eb;
+  --color-primary: #3b82f6;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
