@@ -154,10 +154,6 @@ select option {
   box-shadow: unset;
 }
 
-.theme-toggle:active {
-  transform: rotate(10deg) scale(1.05);
-}
-
 .timer {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
@@ -677,11 +673,6 @@ button:active, .login-btn:active {
 /* Theme toggle hover */
 .theme-toggle {
   transition: all var(--transition-bounce);
-}
-
-.theme-toggle:hover {
-  transform: rotate(15deg) scale(1.1);
-  color: var(--color-primary);
 }
 
 /* Dropdown hover effects */
