@@ -148,8 +148,10 @@ select option {
 }
 
 .theme-toggle:hover {
-  color: var(--color-primary);
-  transform: rotate(15deg) scale(1.1);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: unset;
+  box-shadow: unset;
 }
 
 .theme-toggle:active {
