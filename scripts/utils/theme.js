@@ -304,6 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Timer functionality - commented out for future use
+/*
 class Timer {
     constructor() {
         this.timerElement = document.querySelector('.timer');
@@ -372,8 +373,39 @@ class Timer {
         }, 5000);
     }
 }
+*/
 
-// Initialize timer when DOM is ready
+// Simple clock functionality - shows current hour
+class SimpleClock {
+    constructor() {
+        this.clockElement = document.querySelector('.clock');
+        this.init();
+    }
+
+    init() {
+        if (this.clockElement) {
+            this.updateClock();
+            // Update every minute (no need for seconds)
+            setInterval(() => this.updateClock(), 60000);
+        }
+    }
+
+    updateClock() {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        
+        // Format: HH:MM (24-hour format)
+        const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+        
+        if (this.clockElement) {
+            this.clockElement.textContent = formattedTime;
+        }
+    }
+}
+
+// Initialize simple clock when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    window.timer = new Timer();
+    // window.timer = new Timer(); // Commented out
+    window.simpleClock = new SimpleClock(); // New simple clock
 });
